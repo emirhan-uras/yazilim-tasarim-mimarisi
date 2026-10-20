@@ -7,12 +7,18 @@ public class Main {
         basicPrinter.print("Sözleşme");
 
         MultiFunctionPrinter mfp = new MultiFunctionPrinter();
+        
         mfp.print("Sözleşme");
-        mfp.scan("Belge");
+        
+        String scannedDocument = mfp.scan("Belge");
+        System.out.println("Taranan Belge: " + scannedDocument);
+
         mfp.fax("Sözleme","2345678");
 
         FakePrinter fakePrinter = new FakePrinter();
 
+        fakePrinter.print("Sözleşme");
+        fakePrinter.print("Sözleşme 2");
         System.out.println("Sözleşme: " + fakePrinter.printed());
     }
 }

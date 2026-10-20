@@ -15,8 +15,8 @@ public class OfficeService {
 
     public void setScanner(DocumentScanner scanner) { this.scanner = scanner; }
 
-    
     public void copy(String paper, int copies) {
-        
+        String doc = scanner.scan(paper); 
+        printer.print(doc);
     }
 }

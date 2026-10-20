@@ -9,7 +9,7 @@ public class FakePrinter implements Printer{
 
     @Override 
     public void print(String doc) {
-        System.out.println("Print: " + doc);
+        printed.add(doc);
     }
 
     public List<String> printed() {
